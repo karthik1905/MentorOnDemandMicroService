@@ -1,0 +1,54 @@
+[{
+    "img": "assets/img/mentor-face1",
+   "name": "Karthik",
+    "exp": "4",
+    "tottraining" : "62",
+    "rating" : "3",
+    "skill" : "Spring",
+    "fees": "3999"
+},
+{
+    "img": "assets/img/mentor-face2",
+   "name": "Krishna",
+    "exp": "6",
+    "tottraining" : "132",
+    "rating" : "4",
+    "skill" : "Angular",
+    "fees": "2999"
+},
+{
+    "img": "assets/img/mentor-face3",
+    "name": "Aravind Balaji",
+     "exp": "1",
+     "tottraining" : "22",
+     "rating" : "3",
+     "skill" : "Java",
+     "fees": "4999"
+},
+{
+    "img": "assets/img/mentor-face4",
+   "name": "Allan Jonathan",
+    "exp": "4",
+    "tottraining" : "52",
+    "rating" : "2",
+    "skill" : "Angular",
+    "fees": "2999"
+},
+{
+    "img": "assets/img/mentor-face5",
+   "name": "Gautham",
+    "exp": "4",
+    "tottraining" : "82",
+    "rating" : "5",
+    "skill" : "Java",
+    "fees": "4999"
+},
+{
+    "img": "assets/img/student",
+   "name": "John Doe",
+    "exp": "1",
+    "tottraining" : "24",
+    "rating" : "2",
+    "skill" : "Java",
+    "fees": "4999"
+}]

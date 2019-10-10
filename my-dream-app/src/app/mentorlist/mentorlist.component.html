@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-lg ">
+    <img class="navbar-brand" src="assets/img/mentor2.png" alt="mentor logo" width="75" height="100">
+    <h2>Mentor On Demand</h2>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-button">
+                <a routerLink="/userhomepage">Home</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="border: none;">
+    <div class="collapse navbar-collapse" style="border: none;" id="navbarNav">
+        <div class="container lg-dark justify-content-center" style="border: none;">
+            <form class="row"  [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+                <div class="col-4 form-group">
+                                <label class="col-form-label">Course</label>
+                        <input type="text"  formControlName="course" class="form-control">
+                </div>
+                <div class="col-4">
+                            <label class="col-form-label">Time Limit</label>
+                             <select >
+                                 <option value="10-12 AM">10-12 AM</option>
+                                 <option value="1-3 PM">1-3 PM</option>
+                                 <option value="4-6 PM">4-6 PM</option>
+                             </select>                             
+                    </div>
+                    <div class="form-group">
+                    <button class="btn btn-lg btn-success btn-sm btn-primary" type="submit">search
+                        </button>
+                        </div>
+                    </form>          
+        </div>
+    </div>
+</nav>
+
+<div class="panel-body">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr   *ngFor="let mentor of mentors">
+                    <td>{{mentor.firstName}}</td>
+                    <td>{{mentor.lastName}}</td>
+                    <td>{{mentor.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<!-- 
+<ul style="list-style-type:none;">
+    <li *ngFor="let mentor of arrMentors" >
+<a data-toggle="modal" href="#mymodal" style="text-decoration:none;">
+<div class="row align-items-center container-fluid border" style="padding: 20px;">
+    <div class="col col-sm-3">
+        <img src="{{mentor.img}}.jpg" alt="mentorphoto" width="75px" height="100px"/>
+    </div>
+    <div class=" col col-sm-3 ">
+        <span>{{mentor.name}}</span>
+    </div>
+    <div class="col-sm-3 col text-center">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+    </div>
+    <div class="col col-sm-3">
+        <input type="button" value="request training">
+    </div>
+</div>
+</a>
+</li>
+</ul>
+<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">John doe</h5>
+                <img src="assets/img/mentor-face2.jpg" alt="mentor photo" width="75px" height="100px">
+            </div>
+            <div class="modal-body">
+                <span class="mb-2"><strong>Skills:</strong></span>
+                <span>
+                    <button type="button" class="btn-info btn">Android</button>
+                    <button type="button" class="btn-info btn">Angular</button>
+                </span>
+                <p>Experience: <strong>2 Years</strong></p>
+                <p>Number of Training Mentored: <strong>85</strong></p>
+                <p>Fees : Rs.4,999.00</p>
+                <p>Gst : Rs.599.00</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light">
+                    <a data-dismiss="modal" data-toggle="modal" href="#reqmodal" style="text-decoration:none;">
+                        Request Proposal
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="reqmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Proposal Sent</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> -->

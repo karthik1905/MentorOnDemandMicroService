@@ -1,0 +1,147 @@
+<nav class="navbar navbar-expand-lg ">
+        <img class="navbar-brand" src="assets/img/mentor2.png" alt="mentor logo" width="75" height="100">
+        <h2>Mentor On Demand</h2>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item nav-button">
+                    <a routerLink="/userhomepage">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+<div class="col-lg-12">
+        <nav class="nav mx-auto">
+                <button routerLink="/userinfoedit" class="btn btn-info">Edit</button>
+            </nav>
+    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" src="http://lorempixel.com/850/280/people/9/">
+            <!-- http://lorempixel.com/850/280/people/9/ -->
+        </div>
+        <div class="useravatar">
+            <img alt="" src="http://lorempixel.com/100/100/people/9/">
+        </div>
+        <div class="card-info"> 
+            <div class="card-title">Pamela Anderson</div>
+            <div class="card-title">pameander@gmail.com</div>
+            <div class="card-title">A student in gaining knowledge</div>
+    
+        </div>
+    </div>
+    <br>
+    <br>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link active" routerLink="/userinfopage">Courses</a>
+        <a class="nav-item nav-link" routerLink="/inprogress">In-Progress</a>
+        <a class="nav-item nav-link" routerLink="/completedcourse">Completed</a>
+    </nav>
+    </div>
+<br>
+    
+<h2>Search Trainer</h2>
+<nav class="navbar navbar-transparent navbar-expand-lg navbar-light bg-light" style="border: none;">
+        <div class="collapse navbar-collapse" style="border: none;" id="navbarNav">
+            <div class="container lg-dark justify-content-center" style="border: none;">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="custom-search-input">
+                            <div class="input-group">
+                                <input type="text" class="search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn justify-content-center">
+                                        <button class="btn btn-lg btn-success btn-sm btn-primary" type="submit">search
+                                        </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row " style="padding: 20px;">
+
+                    <div class="col-sm-6">
+                            <div class="form-group row ml-auto">
+                                <label class="col-form-label">From</label>
+                                <div class="col-6">
+                                    <input class="form-control" type="time" value="10:10:00">
+                                </div>
+                            </div>                                
+                        </div>
+                    <div class="col-sm-6 ml-auto">
+                        <div class="form-group row">
+                            <label class="col-form-label">To</label>
+                            <div class="col-6">
+                                <input class="form-control" type="time" value="10:10:00">
+                            </div>
+                        </div>                                
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </nav>
+    
+    
+    <ul style="list-style-type:none;">
+        <li *ngFor="let mentor of arrMentors" >
+            <div *ngIf="mentor.skill=='Java'">
+    <a data-toggle="modal" href="#mymodal" style="text-decoration:none;">
+    <div class="row align-items-center container-fluid border" style="padding: 20px;">
+        <div class="col col-sm-3">
+            <img src="{{mentor.img}}.jpg" alt="mentorphoto" width="75px" height="100px"/>
+        </div>
+        <div class=" col col-sm-3 ">
+            <span>{{mentor.name}}</span>
+        </div>
+        <div class="col-sm-3 col text-center">
+                    <span class="fa fa-star checked"></span>
+        </div>
+        <div class="col col-sm-3">
+            <input type="button" value="request training">
+        </div>
+    </div>
+    </a>
+    <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">John doe</h5>
+                    <img src="assets/img/mentor-face2.jpg" alt="mentor photo" width="75px" height="100px">
+                </div>
+                <div class="modal-body">
+                    <span class="mb-2"><strong>Skills:</strong></span>
+                    <span>
+                        <button type="button" class="btn-info btn">Android</button>
+                        <button type="button" class="btn-info btn">Angular</button>
+                    </span>
+                    <p>Experience: <strong>2 Years</strong></p>
+                    <p>Number of Training Mentored: <strong>85</strong></p>
+                    <p>Fees : Rs.4,999.00</p>
+                    <p>Gst : Rs.599.00</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light">
+                        <a data-dismiss="modal" data-toggle="modal" href="#reqmodal" style="text-decoration:none;">
+                            Request Proposal
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="reqmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Proposal Sent</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    </li>
+    </ul>

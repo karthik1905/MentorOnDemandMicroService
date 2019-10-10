@@ -1,0 +1,13 @@
+.tablespace{
+    padding: 100px;
+}
+.nav-button{
+    font-size: 125%;
+    padding: 20px;
+    color: white ;
+}
+.upload-btn{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

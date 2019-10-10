@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg ">
+    <img class="navbar-brand" src="assets/img/mentor2.png" alt="mentor logo" width="75" height="100">
+    <h2>Mentor On Demand</h2>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-button">
+                <a routerLink="/admin">Home Admin</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" style="font-size: 20px;">
+<h2>Edit Skill</h2>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light row" style="border: none;">
+        <div class="collapse navbar-collapse" style="border: none;" id="navbarNav">
+            <div class="container lg-dark justify-content-center" style="border: none;">
+                <form class="row"  [formGroup]="editForm" (ngSubmit)="onSubmit()">
+                    <div class="col-3 form-group">
+                                    <label class="col-form-label">Course</label>
+                            <input type="text"  formControlName="courseName" class="form-control">
+                    </div>
+                    <div class="col-3 form-group">
+                            <label class="col-form-label">PreRequities</label>
+                    <input type="text"  formControlName="preRequities" class="form-control">
+            </div>
+            <div class="col-3 form-group">
+                    <label class="col-form-label">TOC</label>
+            <input type="text"  formControlName="toc" class="form-control">
+             </div>
+                <div class="col-2 form-group">
+            <label class="col-form-label">Fee</label>
+                     <input type="text"  formControlName="fee" class="form-control">
+                         </div>
+                        <div class="form-group" style="padding-top: 40px; padding-left: 8px">
+                        <button class="btn btn-lg btn-success btn-sm btn-primary" type="submit">ADD
+                            </button>
+                            </div>
+                        </form>          
+            </div>
+        </div>
+    </nav>
+
+    <div class="panel-body">
+            <table class="table table-striped table-bordered">
+                <tbody>
+                    <tr   *ngFor="let mentor of skills">
+                        <td>{{mentor.courseName}}</td>
+                    <td><button (click)="deleteSkill(mentor.courseName)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+</div>

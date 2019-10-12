@@ -3,7 +3,6 @@ package com.cognizant.course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 
 @RestController
@@ -21,8 +20,8 @@ public class CourseController {
     public void setCourse(@RequestBody Course s) {
         courseService.setCourseDetails(s);
     }
-    @RequestMapping("/course/{course}")
-    public Course deleteCourse (@PathVariable String course){
-        return courseService.deleteCourse(course);
+    @DeleteMapping("/course/{course}")
+    public void deleteCourse (@PathVariable String course){
+        courseService.deleteCourse(course);
     }
 }

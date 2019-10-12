@@ -14,8 +14,12 @@ public class UserController {
     @RequestMapping("/user")
     @GetMapping
     public ArrayList<User> getList(){
-//        Course course = csp.getCourse();
         return userService.getUserList();
+    }
+
+    @PutMapping("/user/{email}")
+    public void updateUser(@PathVariable String email){
+        userService.updateUser(email);
     }
 
     @RequestMapping(method= RequestMethod.POST,value = "/user")
@@ -23,7 +27,7 @@ public class UserController {
         userService.setUserDetails(s);
     }
 
-    @RequestMapping("user/{email}")
+    @RequestMapping("/user/{email}")
     public User userLogin(@PathVariable String email){
         return userService.userLogin(email);
     }

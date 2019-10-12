@@ -15,14 +15,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light row" style="border: none;">
         <div class="collapse navbar-collapse" style="border: none;" id="navbarNav">
             <div class="container lg-dark justify-content-center" style="border: none;">
-                <form class="row"  [formGroup]="editForm" (ngSubmit)="onSubmit()">
+                <form class="row"  [formGroup]="editForm" (ngSubmit)="onCreate()">
                     <div class="col-3 form-group">
                                     <label class="col-form-label">Course</label>
                             <input type="text"  formControlName="courseName" class="form-control">
                     </div>
                     <div class="col-3 form-group">
                             <label class="col-form-label">PreRequities</label>
-                    <input type="text"  formControlName="preRequities" class="form-control">
+                    <input type="text"  formControlName="PreRequities" class="form-control">
             </div>
             <div class="col-3 form-group">
                     <label class="col-form-label">TOC</label>

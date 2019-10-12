@@ -17,4 +17,11 @@ export class UserserviceService {
    getUserCred(email:string):Observable<UserSignup>{
     return this.http.get<UserSignup>(`${this.baseUrl}` + 'user/'+email);
   } 
+  blockUser(user:UserSignup,email:string):Observable<UserSignup>{
+    return this.http.put<UserSignup>(`${this.baseUrl}`+'email',user);
+  }
+  
+  getCourse():Observable<Object>{
+    return this.http.get<Object>(`${this.baseUrl}`);
+  }
 }

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class CourseService {
@@ -21,7 +22,8 @@ public class CourseService {
     public void setCourseDetails(Course course) {
         cr.save(course);
     }
-    public Course deleteCourse(String course){
-        return cr.deleteCourse(course);
+    public void deleteCourse(String course){
+//        Optional<Course> c = cr.findById(course);
+        cr.deleteById(course);
     }
 }

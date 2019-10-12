@@ -20,6 +20,6 @@ export class CourseServiceService {
     return this.http.get<Object>(`${this.baseUrl}`);
   }
   deleteSkill(coursename:string):Observable<CourseDetail>{
-    return this.http.get<CourseDetail>(`${this.baseUrl}`+"/"+coursename);
+    return this.http.delete<CourseDetail>(`${this.baseUrl}`+"/"+coursename);
   }
 }

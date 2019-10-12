@@ -23,7 +23,7 @@ export class EditskillComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,private router: Router,private courseservice: CourseServiceService,private http : HttpClient) { 
     this.editForm= new FormGroup({
       courseName : new FormControl(''),
-      preRequities: new FormControl(''),
+      PreRequities: new FormControl(''),
       fee: new FormControl(''),
       toc: new FormControl('')
     })
@@ -32,6 +32,7 @@ export class EditskillComponent implements OnInit {
 
   ngOnInit() {
     this.showDetails();
+    this.onCreate();
     }
     deleteSkill(temp:string){
      console.log("inside delete");
@@ -49,11 +50,12 @@ export class EditskillComponent implements OnInit {
       console.log(data);
     });
   }
-  onsubmit(){
+  onCreate(){
+    console.log("indiede onsubmit of course");
     console.log("course name"+this.editForm.get('courseName').value);
     this.courseObj.courseName=this.editForm.get('courseName').value;
-    console.log("prereqities"+this.editForm.get('preRequities').value);
-    this.courseObj.preRequities=this.editForm.get('preRequities').value;
+    console.log("prereqities"+this.editForm.get('PreRequities').value);
+    this.courseObj.preRequities=this.editForm.get('PreRequities').value;
     console.log("toc"+this.editForm.get('toc').value);
     this.courseObj.toc=this.editForm.get('toc').value;
     this.courseObj.totalFee=this.editForm.get('fee').value;

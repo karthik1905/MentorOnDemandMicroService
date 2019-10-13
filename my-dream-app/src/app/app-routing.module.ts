@@ -18,13 +18,15 @@ import {BlockComponent } from './block/block.component';
 import {EditskillComponent } from './editskill/editskill.component'; 
 import { MentorsignupcompletedComponent } from './mentorsignupcompleted/mentorsignupcompleted.component';
 import { MSignupComponent } from './msignup/msignup.component';
+import { BlockMentorComponent } from './block-mentor/block-mentor.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/userhomepage', pathMatch: 'full' },
   { path: 'signin', component: SigninComponent },
   { path: 'block', component: BlockComponent },
   { path: 'usersignup', component: SignupComponent },
-  {path: 'mentorsignup' , component: MSignupComponent},
+  { path: 'mentorsignup' , component: MSignupComponent},
+  { path: 'blockMentor' , component: BlockMentorComponent},
   { path: 'admin', component: AdminComponent },
   { path: 'userhomepage', component: UserhomepageComponent },
   { path: 'mentorlist', component: MentorlistComponent },

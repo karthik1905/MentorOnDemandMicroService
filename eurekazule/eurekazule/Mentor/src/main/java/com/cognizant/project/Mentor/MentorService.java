@@ -20,7 +20,11 @@ public class MentorService {
     public void setMentorDetails(Mentor mentor) {
         mr.save(mentor);
     }
-
+    public void updateMentor(String email){
+        Mentor m = mr.findById(email).get();
+        m.setStatus("blocked");
+        mr.save(m);
+    }
     public Mentor mentorLogin(String email){
         return mr.searchEmail(email);
     }

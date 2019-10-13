@@ -22,4 +22,10 @@ export class MentorserviceService {
     console.log("inside getmentorlist and the course is"+course);
     return this.http.get<MentorSignup[]>(`${this.baseUrl}`+'mentor/course/'+course);
   }
+  blockMentor(mentor: MentorSignup,email:string):Observable<Object>{
+    return this.http.put(`${this.baseUrl}`+'mentor/'+email,mentor);
+  }
+  getMentor():Observable<Object>{
+    return this.http.get<Object>(`${this.baseUrl}`+'mentor');
+  }
 }

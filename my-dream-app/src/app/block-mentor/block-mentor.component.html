@@ -15,15 +15,15 @@
             <tbody>
                 <tr>
                     <th>
-                        User
+                        Mentor
                     </th>
                     <th>
                         Block/Unblock
                     </th>
                 </tr>
-                <tr   *ngFor="let user of users">
-                    <td>{{user.email}}</td>
-                <td><button (click)="blockUser(user.email)">Blocks</button></td>
+                <tr   *ngFor="let mentor of mentors">
+                    <td>{{mentor.email}}</td>
+                <td><button (click)="blockMentor(mentor.email)">Block</button></td>
                 </tr>
             </tbody>
         </table>

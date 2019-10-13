@@ -31,6 +31,7 @@ import { AdminComponent } from './admin/admin.component';
 import { BlockComponent } from './block/block.component';
 import { EditskillComponent } from './editskill/editskill.component';
 import { MSignupComponent } from './msignup/msignup.component';
+import { BlockMentorComponent } from './block-mentor/block-mentor.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MSignupComponent } from './msignup/msignup.component';
     MentorsignupcompletedComponent,
     AdminComponent,
     BlockComponent,
-    EditskillComponent
+    EditskillComponent,
+    BlockMentorComponent
   ],
   exports:
   [ ReactiveFormsModule,
